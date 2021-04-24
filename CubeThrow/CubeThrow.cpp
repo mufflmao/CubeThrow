@@ -274,7 +274,6 @@ void WinCheck()
 
 int main()
 {
-
 	setlocale(LC_ALL, "Russian");
 	cout << "Добро пожаловать, дорогой игрок! Введи свое имя: ";
 	cin >> PlayerName;
