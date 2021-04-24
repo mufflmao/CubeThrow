@@ -4,8 +4,8 @@
 
 
 using namespace std;
-
-int turn = 0, PlayerIsFirst = 0;
+string PlayerName;
+int PCPoint = 0, PlayerPoints = 0, PCDrop = 0, PlayerDrop = 0, drop = 0, turn = 0, PlayerIsFirst = 0;
 
 void Queue()
 {
@@ -22,9 +22,6 @@ void Queue()
 		cout << "Компьютер ходит первый!" << endl;
 	}
 }
-
-int PCPoint = 0, PlayerPoints = 0, PCDrop = 0, PlayerDrop = 0, drop = 0;
-
 void PCThrow()
 {
 	cout << "Бросок компьютера: (кубик 1) " << endl;
@@ -146,7 +143,7 @@ void PCThrow()
 }
 void PlayerThrow()
 {
-	cout << "Ваш первый бросок: (кубик 1) " << endl;
+	cout << "Бросок " << PlayerName << ": (кубик 1) " << endl;
 	PlayerDrop = rand() % 6 + 1;
 	if (PlayerDrop == 1)
 	{
@@ -204,7 +201,7 @@ void PlayerThrow()
 	}
 	cout << PlayerDrop << endl;
 	cout << PlayerPoints << endl;
-	cout << "Ваш первый бросок: (кубик 2) " << endl;
+	cout << "Бросок " << PlayerName << ": (кубик 2) " << endl;
 	PlayerDrop = rand() % 6 + 1;
 	if (PlayerDrop == 1)
 	{
@@ -267,15 +264,15 @@ void WinCheck()
 {
 	if (PlayerPoints > PCPoint)
 	{
-		cout << "Поздравляю, вы победили бога рандома!" << endl;
+		cout << "Поздравляю, " << PlayerName << ", вы победили бога рандома!" << endl;
 	}
 	if (PlayerPoints < PCPoint)
 	{
-		cout << "К сожалению, вы проиграли богу рандома!" << endl;
+		cout << PlayerName << ", к сожалению, вы проиграли богу рандома!" << endl;
 	}
 	if (PlayerPoints == PCPoint)
 	{
-		cout << "Ничья! Вы теперь брат бога рандома! :D" << endl;
+		cout << "Ничья! " << PlayerName << "теперь брат бога рандома! :D" << endl;
 	}
 }
 
@@ -283,7 +280,6 @@ int main()
 {
 
 	setlocale(LC_ALL, "Russian");
-	string PlayerName;
 	cout << "Добро пожаловать, дорогой игрок! Введи свое имя: ";
 	cin >> PlayerName;
 	cout << "Начинаем игру!" << endl;
