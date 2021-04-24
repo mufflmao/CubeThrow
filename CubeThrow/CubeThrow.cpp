@@ -80,8 +80,7 @@ void PCThrow()
 		cout << "*.   .*" << endl;
 		cout << "*******" << endl;
 	}
-	cout << PCDrop << endl;
-	cout << PCPoint << endl;
+	cout << "Выпало: " << PCDrop << endl;
 	cout << "Бросок компьютера: (кубик 2) " << endl;
 	PCDrop = rand() % 6 + 1;
 	if (PCDrop == 1)
@@ -138,8 +137,7 @@ void PCThrow()
 		cout << "*.   .*" << endl;
 		cout << "*******" << endl;
 	}
-	cout << PCDrop << endl;
-	cout << PCPoint << endl;
+	cout << "Выпало: " << PCDrop << endl;
 }
 void PlayerThrow()
 {
@@ -199,8 +197,7 @@ void PlayerThrow()
 		cout << "*.   .*" << endl;
 		cout << "*******" << endl;
 	}
-	cout << PlayerDrop << endl;
-	cout << PlayerPoints << endl;
+	cout << "Выпало: " << PlayerDrop << endl;
 	cout << "Бросок " << PlayerName << ": (кубик 2) " << endl;
 	PlayerDrop = rand() % 6 + 1;
 	if (PlayerDrop == 1)
@@ -257,8 +254,7 @@ void PlayerThrow()
 		cout << "*.   .*" << endl;
 		cout << "*******" << endl;
 	}
-	cout << PlayerDrop << endl;
-	cout << PlayerPoints << endl;
+	cout << "Выпало: " << PlayerDrop << endl;
 }
 void WinCheck()
 {
