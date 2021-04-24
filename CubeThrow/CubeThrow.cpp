@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
+
 using namespace std;
 
 int turn = 0, PlayerIsFirst = 0;
@@ -15,26 +16,156 @@ void Queue()
 		PlayerIsFirst = 1;
 		cout << "Вы ходите первый!" << endl;
 	}
-	if (turn = 0)
+	if (turn == 0)
 	{
 		PlayerIsFirst = 0;
 		cout << "Компьютер ходит первый!" << endl;
 	}
 }
 
-int PCPoint = 0, PlayerPoints = 0, PCGapDrop = 0, PlayerGapDrop = 0;
+int PCPoint = 0, PlayerPoints = 0, PCDrop = 0, PlayerDrop = 0;
 
-void FirstCubeThrow()
+void FirstThrow()
+{
+	if (PlayerIsFirst == 0);
+	{
+		cout << "Первый бросок компьютера: " << endl;
+		PCDrop = rand() % 6 + 1;
+		if (PCDrop == 1)
+		{
+			PCPoint += 1;
+			cout << "_______" << endl;
+			cout << "|     |" << endl;
+			cout << "|  .  |" << endl;
+			cout << "|     |" << endl;
+			cout << "_______" << endl;
+		}
+		if (PCDrop == 2)
+		{
+			PCPoint += 2;
+			cout << "_______" << endl;
+			cout << "|  .  |" << endl;
+			cout << "|     |" << endl;
+			cout << "|  .  |" << endl;
+			cout << "_______" << endl;
+		}
+		if (PCDrop == 3)
+		{
+			PCPoint += 3;
+			cout << "_______" << endl;
+			cout << "|  .  |" << endl;
+			cout << "|  .  |" << endl;
+			cout << "|  .  |" << endl;
+			cout << "_______" << endl;
+		}
+		if (PCDrop == 4)
+		{
+			PCPoint += 4;
+			cout << "_______" << endl;
+			cout << "|.   .|" << endl;
+			cout << "|     |" << endl;
+			cout << "|.   .|" << endl;
+			cout << "_______" << endl;
+		}
+		if (PCDrop == 5)
+		{
+			PCPoint += 5;
+			cout << "_______" << endl;
+			cout << "|.   .|" << endl;
+			cout << "|  .  |" << endl;
+			cout << "|.   .|" << endl;
+			cout << "_______" << endl;
+		}
+		if (PCDrop == 6)
+		{
+			PCPoint += 6;
+			cout << "_______" << endl;
+			cout << "|.   .|" << endl;
+			cout << "|.   .|" << endl;
+			cout << "|.   .|" << endl;
+			cout << "_______" << endl;
+		}
+	}
+	if (PlayerIsFirst == 1);
+	{
+		cout << "Ваш первый бросок: " << endl;
+		PlayerPoints = rand() % 6 + 1;
+		if (PlayerPoints == 1)
+		{
+			PlayerPoints += 1;
+			cout << "_______" << endl;
+			cout << "|     |" << endl;
+			cout << "|  .  |" << endl;
+			cout << "|     |" << endl;
+			cout << "_______" << endl;
+		}
+		if (PlayerPoints == 2)
+		{
+			PlayerPoints += 2;
+			cout << "_______" << endl;
+			cout << "|  .  |" << endl;
+			cout << "|     |" << endl;
+			cout << "|  .  |" << endl;
+			cout << "_______" << endl;
+		}
+		if (PlayerPoints == 3)
+		{
+			PlayerPoints += 3;
+			cout << "_______" << endl;
+			cout << "|  .  |" << endl;
+			cout << "|  .  |" << endl;
+			cout << "|  .  |" << endl;
+			cout << "_______" << endl;
+		}
+		if (PlayerPoints == 4)
+		{
+			PlayerPoints += 4;
+			cout << "_______" << endl;
+			cout << "|.   .|" << endl;
+			cout << "|     |" << endl;
+			cout << "|.   .|" << endl;
+			cout << "_______" << endl;
+		}
+		if (PlayerPoints == 5)
+		{
+			PlayerPoints += 5;
+			cout << "_______" << endl;
+			cout << "|.   .|" << endl;
+			cout << "|  .  |" << endl;
+			cout << "|.   .|" << endl;
+			cout << "_______" << endl;
+		}
+		if (PlayerPoints == 6)
+		{
+			PlayerPoints += 6;
+			cout << "_______" << endl;
+			cout << "|.   .|" << endl;
+			cout << "|.   .|" << endl;
+			cout << "|.   .|" << endl;
+			cout << "_______" << endl;
+		}
+	}
+}
+void SecondThrow()
 {
 
 }
-void SecondCubeThrow()
+void ThirdThrow()
 {
 
 }
+void FourthThrow()
+{
+
+}
+
 
 int main()
 {
-
-
+	setlocale(LC_ALL, "Russian");
+	string PlayerName;
+	cout << "Добро пожаловать, дорогой игрок! Введи свое имя: ";
+	cin >> PlayerName;
+	cout << "Начинаем игру!" << endl;
+	Queue();
 }
