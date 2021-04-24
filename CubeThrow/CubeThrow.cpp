@@ -89,8 +89,8 @@ void FirstThrow()
 	if (PlayerIsFirst == 1);
 	{
 		cout << "Ваш первый бросок: " << endl;
-		PlayerPoints = rand() % 6 + 1;
-		if (PlayerPoints == 1)
+		PlayerDrop = rand() % 6 + 1;
+		if (PlayerDrop == 1)
 		{
 			PlayerPoints += 1;
 			cout << "_______" << endl;
@@ -99,7 +99,7 @@ void FirstThrow()
 			cout << "|     |" << endl;
 			cout << "_______" << endl;
 		}
-		if (PlayerPoints == 2)
+		if (PlayerDrop == 2)
 		{
 			PlayerPoints += 2;
 			cout << "_______" << endl;
@@ -108,7 +108,7 @@ void FirstThrow()
 			cout << "|  .  |" << endl;
 			cout << "_______" << endl;
 		}
-		if (PlayerPoints == 3)
+		if (PlayerDrop == 3)
 		{
 			PlayerPoints += 3;
 			cout << "_______" << endl;
@@ -117,7 +117,7 @@ void FirstThrow()
 			cout << "|  .  |" << endl;
 			cout << "_______" << endl;
 		}
-		if (PlayerPoints == 4)
+		if (PlayerDrop == 4)
 		{
 			PlayerPoints += 4;
 			cout << "_______" << endl;
@@ -126,7 +126,7 @@ void FirstThrow()
 			cout << "|.   .|" << endl;
 			cout << "_______" << endl;
 		}
-		if (PlayerPoints == 5)
+		if (PlayerDrop == 5)
 		{
 			PlayerPoints += 5;
 			cout << "_______" << endl;
@@ -135,7 +135,7 @@ void FirstThrow()
 			cout << "|.   .|" << endl;
 			cout << "_______" << endl;
 		}
-		if (PlayerPoints == 6)
+		if (PlayerDrop == 6)
 		{
 			PlayerPoints += 6;
 			cout << "_______" << endl;
