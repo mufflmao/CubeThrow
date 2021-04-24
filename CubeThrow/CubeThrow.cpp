@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-
 using namespace std;
 string PlayerName;
 int PCPoint = 0, PlayerPoints = 0, PCDrop = 0, PlayerDrop = 0, drop = 0, turn = 0, PlayerIsFirst = 0;
